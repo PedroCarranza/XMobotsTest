@@ -1,0 +1,41 @@
+.sideNav {
+    height: 100%;  
+    width: 100%;  
+    position: auto; 
+    z-index: 1; 
+    top: 0; 
+    left: 0; 
+    background-color: darkgray; 
+    overflow-x: hidden; 
+    padding-top: 20px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+.sideNav h3{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2vh;
+    border-bottom: 3px solid lightgray;
+}
+
+.sideNav .upload{
+    visibility: hidden;
+}
+
+.sideNav .uploadLabel{
+    font: 16px;
+    text-decoration: none;
+    background-color: lightgray;
+    color: black;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+}
+
+.sideNav .uploadLabel:hover {
+    background-color: white;
+}

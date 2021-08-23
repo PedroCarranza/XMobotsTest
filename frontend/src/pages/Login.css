@@ -1,0 +1,78 @@
+.login{   
+    margin: auto;
+    position: fixed;
+    top: 32.5%;
+    left: 37.5%;
+    height: 35%;
+
+    flex-direction: column;
+    
+    box-sizing: border-box;
+    width: 25%;
+    margin: auto;
+    background: #ffffff;
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    padding: 40px 55px 45px 55px;
+    border-radius: 25px;
+    transition: all .3s;
+}
+
+.login label{ 
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.login .form-group{
+    margin-bottom: 1rem;
+    display: block;
+    font-weight: bold;
+}
+
+.login .form-group ::after, .login .form-group ::before{
+    box-sizing: border-box;
+}
+
+.login .form-control{
+    box-sizing: border-box;
+    border-color:gray;
+    background-clip: padding-box;
+    box-shadow: none;
+    display: block;
+    width: 100%;
+
+    margin: 0;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border-radius: .25rem;
+    border: 2px solid darkgray;
+    height: calc(1.5em + .75rem + 2px);
+}
+
+.login h2 {
+    text-align: center;
+    margin: 0;
+    line-height: 1;
+    padding-bottom: 2vh;
+}
+
+.login .button{
+    box-sizing: border-box;
+    margin: 3vh 0 0 0;
+    background-color: lightgray;
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1;
+    border-radius: .25rem;
+    padding: .375rem .75rem;
+    border-color: darkgray;
+}
+
+.login .button:hover {
+    background-color: darkgray !important;
+    box-shadow: none !important;
+}
