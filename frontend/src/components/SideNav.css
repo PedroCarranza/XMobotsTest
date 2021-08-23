@@ -25,6 +25,8 @@
 }
 
 .sideNav .uploadLabel{
+    text-align: center;
+    width: 50%;
     font: 16px;
     text-decoration: none;
     background-color: lightgray;
@@ -37,5 +39,5 @@
 }
 
 .sideNav .uploadLabel:hover {
-    background-color: white;
+    background-color: darkgray;
 }
