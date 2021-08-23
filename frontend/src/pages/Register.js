@@ -35,10 +35,9 @@ class Register extends React.Component {
                         <input required type="user" className="form-control" placeholder="Digite o usuário" onChange={e => this.setState({ user: e.target.value })} />
                     </div>
 
-
                     <div className="form-group">
                         <label>E-mail</label>
-                        <input required type="user" className="form-control" placeholder="Digite o usuário" onChange={e => this.setState({ email: e.target.value })} />
+                        <input required type="email" className="form-control" placeholder="Digite o usuário" onChange={e => this.setState({ email: e.target.value })} />
                     </div>
 
                     <div className="form-group">
@@ -52,7 +51,7 @@ class Register extends React.Component {
                     </div>
 
                     <div className="form-group" >
-                        <button disabled={!(this.state.password === this.state.confirmPassword && (this.state.password !== ""))} type="submit" className="button">Entrar</button>
+                        <button disabled={!(this.state.password === this.state.confirmPassword && this.state.password !== "" && this.state.user !== "" && this.state.email !== "")} type="submit" className="button">Entrar</button>
                     </div>
                 </form>
             </div>
