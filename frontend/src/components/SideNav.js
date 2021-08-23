@@ -138,7 +138,8 @@ class SideNav extends React.Component {
                                 borderBottom: "2px solid black",
                                 borderTop: "2px solid black",
                                 fontSize: "13px"
-                            }
+                            },
+                            tableLayout: "fixed"
                         }}
                         localization={{
                             body: {
