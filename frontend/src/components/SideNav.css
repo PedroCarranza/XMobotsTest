@@ -5,7 +5,7 @@
     z-index: 1; 
     top: 0; 
     left: 0; 
-    background-color: darkgray; 
+    background-color: #3300; 
     overflow-x: hidden; 
     padding-top: 20px; 
     display: flex; 
@@ -17,7 +17,7 @@
     text-align: center;
     width: 100%;
     margin-bottom: 2vh;
-    border-bottom: 3px solid lightgray;
+    border-bottom: 3px solid black;
 }
 
 .sideNav .upload{

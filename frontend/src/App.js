@@ -5,6 +5,7 @@ import React from 'react';
 import Login from "./pages/Login"
 import Register from './pages/Register';
 import Main from './pages/Main';
+import Nav from './components/Nav';
 
 class App extends React.Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class App extends React.Component {
       return (
         <div className="App">
           <BrowserRouter>
+            <Nav />
             <Route path="/" exact component={() => <Login setUser={(param) => { this.setState({ user: param }) }} />} />
             <Route path="/login" exact component={() => <Login setUser={(param) => { this.setState({ user: param }) }} />} />
             <Route path="/register" exact component={() => <Register setUser={(param) => { this.setState({ user: param }) }} />} />

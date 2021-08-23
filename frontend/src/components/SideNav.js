@@ -62,15 +62,15 @@ class SideNav extends React.Component {
                 var lat, lng;
                 switch (patternType) {
                     case 1:
-                        dmsText = descriptionSplit[j].slice(0, 2) + "° " + descriptionSplit[j].slice(2, 4) + "' " + descriptionSplit[j].slice(4, 6) + '" ' + (descriptionSplit[j].charAt(6) === "N" ? "North" : "South") + " by "
-                            + descriptionSplit[j].slice(9, 11) + "° " + descriptionSplit[j].slice(11, 13) + "' " + descriptionSplit[j].slice(13, 15) + '" ' + (descriptionSplit[j].charAt(15) === "W" ? "West" : "East");
+                        dmsText = descriptionSplit[j].slice(0, 2) + "° " + descriptionSplit[j].slice(2, 4) + "' " + descriptionSplit[j].slice(4, 6) + '" ' + (descriptionSplit[j].charAt(6) === "N" ? "North " : "South ")
+                            + descriptionSplit[j].slice(9, 11) + "° " + descriptionSplit[j].slice(11, 13) + "' " + descriptionSplit[j].slice(13, 15) + '" ' + (descriptionSplit[j].charAt(15) === "W" ? "West " : "East ");
                         lat = (parseFloat(descriptionSplit[j].slice(0, 2)) + parseFloat(descriptionSplit[j].slice(2, 4)) / 60 + parseFloat(descriptionSplit[j].slice(4, 6)) / 3600) * (descriptionSplit[j].charAt(6) === "S" ? -1 : 1);
                         lng = (parseFloat(descriptionSplit[j].slice(9, 11)) + parseFloat(descriptionSplit[j].slice(11, 13)) / 60 + parseFloat(descriptionSplit[j].slice(13, 15)) / 3600) * (descriptionSplit[j].charAt(15) === "W" ? -1 : 1);
                         break;
                     case 2:
                     case 3:
-                        dmsText = descriptionSplit[j].slice(0, 2) + "° " + descriptionSplit[j].slice(2, 4) + "' " + descriptionSplit[j].slice(4, 6) + "." + descriptionSplit[j].slice(7, 9) + '" ' + (descriptionSplit[j].charAt(9) === "N" ? "North" : "South") + " by "
-                            + descriptionSplit[j].slice(12, 14) + "° " + descriptionSplit[j].slice(14, 16) + "' " + descriptionSplit[j].slice(16, 18) + "." + descriptionSplit[j].slice(19, 21) + '" ' + (descriptionSplit[j].charAt(21) === "W" ? "West" : "East");
+                        dmsText = descriptionSplit[j].slice(0, 2) + "° " + descriptionSplit[j].slice(2, 4) + "' " + descriptionSplit[j].slice(4, 6) + "." + descriptionSplit[j].slice(7, 9) + '" ' + (descriptionSplit[j].charAt(9) === "N" ? "North " : "South ")
+                            + descriptionSplit[j].slice(12, 14) + "° " + descriptionSplit[j].slice(14, 16) + "' " + descriptionSplit[j].slice(16, 18) + "." + descriptionSplit[j].slice(19, 21) + '" ' + (descriptionSplit[j].charAt(21) === "W" ? "West " : "East ");
                         lat = (parseFloat(descriptionSplit[j].slice(0, 2)) + parseFloat(descriptionSplit[j].slice(2, 4)) / 60 + parseFloat(descriptionSplit[j].slice(4, 6) + "." + descriptionSplit[j].slice(7, 9)) / 3600) * (descriptionSplit[j].charAt(9) === "S" ? -1 : 1);
                         lng = (parseFloat(descriptionSplit[j].slice(12, 14)) + parseFloat(descriptionSplit[j].slice(14, 16)) / 60 + parseFloat(descriptionSplit[j].slice(16, 18) + "." + descriptionSplit[j].slice(19, 21)) / 3600) * (descriptionSplit[j].charAt(21) === "W" ? -1 : 1);
                         break;
@@ -113,10 +113,10 @@ class SideNav extends React.Component {
                                 title: "DMS", field: "dms"
                             },
                             {
-                                title: "Data de criação", field: "createdAt"
+                                title: "Data criação", field: "createdAt"
                             },
                             {
-                                title: "Quantidade de pistas", field: "runwaysQtd"
+                                title: "Qtd pistas", field: "runwaysQtd"
                             },
                         ]}
                         data={this.state.data}
@@ -137,7 +137,8 @@ class SideNav extends React.Component {
                             headerStyle: {
                                 borderBottom: "2px solid black",
                                 borderTop: "2px solid black",
-                                fontSize: "13px"
+                                fontSize: "13px",
+                                whiteSpace: 'nowrap'
                             },
                             tableLayout: "fixed"
                         }}
