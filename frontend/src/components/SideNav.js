@@ -122,7 +122,7 @@ class SideNav extends React.Component {
                         data={this.state.data}
                         options={{
                             cellStyle: {
-                                fontSize: 11,
+                                fontSize: 9,
                             },
                             toolbar: false,
                             sorting: false,
